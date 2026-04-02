@@ -8,26 +8,11 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region = var.region
-
-  # Optional: Add default tags to all resources
-  default_tags {
-    tags = {
-      Environment = "development"
-      ManagedBy   = "Terraform"
-      Project     = "OpenClaw"
-    }
-  }
-}
-
 # Deploy OpenClaw module
 module "openclaw" {
   source = "../.."
 
   # AWS Configuration
-  region        = var.region
   instance_type = var.instance_type
 
   # OpenClaw Configuration

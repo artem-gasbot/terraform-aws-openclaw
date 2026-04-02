@@ -61,7 +61,6 @@ output "instructions" {
     Resources:
     - Instance IP: ${module.openclaw.public_ip}
     - Instance DNS: ${module.openclaw.public_dns}
-    - Region: ${var.region}
     - Instance Type: ${var.instance_type}
 
     ========================================

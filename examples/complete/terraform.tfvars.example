@@ -2,7 +2,6 @@
 # Copy this file to terraform.tfvars and fill in your actual values
 
 # AWS Configuration
-region        = "us-east-1"
 instance_type = "t3.medium"
 
 # LLM Provider Configuration

@@ -12,10 +12,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = var.region
-}
-
 # SSH Key Pair and Gateway Key Pair Generation
 resource "tls_private_key" "ssh" {
   algorithm = "ED25519"

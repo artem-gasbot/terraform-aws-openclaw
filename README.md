@@ -47,7 +47,10 @@ This module deploys:
 module "openclaw" {
   source = "github.com/srajasimman/terraform-aws-openclaw"
 
-  region             = "us-east-1"
+  providers = {
+    aws
+  }
+
   instance_type      = "t3.medium"
   
   # LLM Provider (default: anthropic)
